@@ -83,7 +83,7 @@ play = function(){
     if(f_or_s == "1"){
       
       while (check_winner(in.state) == F) {
-        #com
+      
         in.state = computer_turn(in.state)
         check_winner(in.state)
         if(sum(in.state == "x") + sum(in.state == "o") == 9 && check_winner(in.state) == F){
