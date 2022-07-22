@@ -97,7 +97,6 @@ play = function(){
           break
         }
         
-        #hum
         display(in.state)
         pos = as.numeric(readline("Where should o play: "))
         
