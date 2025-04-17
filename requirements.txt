@@ -7,3 +7,12 @@ scipy
 scikit-learn
 ta
 openpyxl
+streamlit
+requests
+opencv-python
+numpy
+moviepy
+google-generativeai
+python-dotenv
+pillow
+assemblyai
