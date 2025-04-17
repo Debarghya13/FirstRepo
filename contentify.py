@@ -891,13 +891,16 @@ if uploaded_file:
                     headline = meme_content.split("PRIMARY HEADLINE")[1].split("SOCIAL MEDIA CAPTION")[0].strip(":\n ")
                     platform_content["headline"] = headline
                     
+                    # FIX: Pre-compute the escaped string for JavaScript
+                    escaped_headline = headline.replace("'", "\\'")
+                    
                     st.markdown(f"""
                     <div style="background-color: #1e2030; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
                         <h3 style="margin-top: 0; color: #cba6f7;">Headline for Video Overlay</h3>
                         <div style="background-color: #181825; padding: 20px; border-radius: 5px; text-align: center; font-size: 20px; font-weight: bold; color: #cdd6f4;">
                             {headline}
                         </div>
-                        <button class="copy-button" onclick="navigator.clipboard.writeText('{headline.replace("'", "\\'")}')">📋 Copy</button>
+                        <button class="copy-button" onclick="navigator.clipboard.writeText('{escaped_headline}')">📋 Copy</button>
                     </div>
                     """, unsafe_allow_html=True)
                 
@@ -905,13 +908,16 @@ if uploaded_file:
                     caption = meme_content.split("SOCIAL MEDIA CAPTION")[1].split("HASHTAGS")[0].strip(":\n ")
                     platform_content["caption"] = caption
                     
+                    # FIX: Pre-compute the escaped string for JavaScript
+                    escaped_caption = caption.replace("'", "\\'")
+                    
                     st.markdown(f"""
                     <div style="background-color: #1e2030; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
                         <h3 style="margin-top: 0; color: #cba6f7;">Platform Caption</h3>
                         <div style="background-color: #181825; padding: 15px; border-radius: 5px; color: #cdd6f4;">
                             {caption}
                         </div>
-                        <button class="copy-button" onclick="navigator.clipboard.writeText('{caption.replace("'", "\\'")}')">📋 Copy</button>
+                        <button class="copy-button" onclick="navigator.clipboard.writeText('{escaped_caption}')">📋 Copy</button>
                     </div>
                     """, unsafe_allow_html=True)
                 
@@ -923,13 +929,16 @@ if uploaded_file:
                     
                     platform_content["hashtags"] = hashtags
                     
+                    # FIX: Pre-compute the escaped string for JavaScript
+                    escaped_hashtags = hashtags.replace("'", "\\'")
+                    
                     st.markdown(f"""
                     <div style="background-color: #1e2030; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
                         <h3 style="margin-top: 0; color: #cba6f7;">Hashtags</h3>
                         <div style="background-color: #181825; padding: 15px; border-radius: 5px; color: #89b4fa;">
                             {hashtags}
                         </div>
-                        <button class="copy-button" onclick="navigator.clipboard.writeText('{hashtags.replace("'", "\\'")}')">📋 Copy</button>
+                        <button class="copy-button" onclick="navigator.clipboard.writeText('{escaped_hashtags}')">📋 Copy</button>
                     </div>
                     """, unsafe_allow_html=True)
                 
