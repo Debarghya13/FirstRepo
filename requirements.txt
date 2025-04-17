@@ -11,7 +11,7 @@ streamlit
 requests
 opencv-python
 numpy
-moviepy
+moviepy==1.0.3
 google-generativeai
 python-dotenv
 pillow
