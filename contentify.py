@@ -200,7 +200,7 @@ st.markdown("""
 
 # Sidebar for API keys and settings
 with st.sidebar:
-    st.image("https://i.ibb.co/PTp6Hx7/assistify-logo.png", width=200)
+    st.image("ai logo.png", width=200)
     st.title("⚙️ Configuration")
     
     # Add tabs for different settings sections
