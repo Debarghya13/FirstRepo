@@ -210,7 +210,7 @@ with st.sidebar:
         # Securely handle API keys
         gemini_api_key = st.text_input(
             "Gemini API Key", 
-            value=os.getenv("GEMINI_API_KEY", "AIzaSyDX5yfGfC_EOch-B1E6ILshpLt7gcW6Twc"),
+            value=os.getenv("GEMINI_API_KEY", "AIzaSyBNaZ1aVQxoSTm05-11MbPg8ADsicxqVu8"),
             type="password",
             help="Enter your Google Gemini API key for AI-powered caption generation"
         )
